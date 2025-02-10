@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Etiquetas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="section">
+            <h2>Generar Etiqueta</h2>
+            <input type="text" id="numero-input" placeholder="Número 1">
+            <input type="text" id="codigo-input" placeholder="Código 1">
+            <input type="text" id="numero2-input" placeholder="Número 2">
+            <input type="text" id="codigo2-input" placeholder="Código 2">
+            <button onclick="generarEtiqueta()">Generar Etiqueta</button>
+            <div id="etiqueta" class="etiqueta">
+                <div class="sector">
+                    <span id="numero-etiqueta"></span>
+                    <img id="qr-code" src="" alt="Código QR 1">
+                </div>
+                <div class="sector">
+                    <span id="numero2-etiqueta"></span>
+                    <img id="qr-code2" src="" alt="Código QR 2">
+                </div>
+            </div>
+            <input type="number" id="cantidad-input" value="1" min="1" placeholder="Cantidad de impresiones">
+            <button onclick="imprimirEtiqueta()">Imprimir Etiqueta</button>
+        </div>
+
+        <div class="section">
+            <h2>Etiquetas Predefinidas</h2>
+            <div class="imagenes">
+                <div class="imagen-btn">
+                    <img src="https://i.postimg.cc/qvzwc62J/FRAGIL-CUIDADO.jpg" alt="FRÁGIL CUIDADO">
+                    <input type="number" id="cantidad-imprimir-fragil" placeholder="Cantidad" min="1">
+                    <button onclick="imprimirImagen('https://i.postimg.cc/qvzwc62J/FRAGIL-CUIDADO.jpg', 'cantidad-imprimir-fragil')">Imprimir</button>
+                </div>
+                <!-- Rest of predefined labels remain the same -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
